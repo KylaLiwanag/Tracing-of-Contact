@@ -1,16 +1,12 @@
-print ("hello")# This is a sample Python script.
+print("programmed by: Kyla Camille A. Liwanag")
+All_contact = []
+print("="*20, "Contact Tracing Book","="*20)
+choice = 1
+while choice !=3:
+    print("\n\n--------------- Contact Tracing Book ---------------\n\n"
+          "What would you like to do?\n\n"
+          "1. Add a Contact \n"
+          "2. Search the Address Book \n"
+          "3. Exit \n")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
