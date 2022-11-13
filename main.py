@@ -1,4 +1,4 @@
-All_Contact = []
+All_Contact ={}
 num = 1
 print("="*20, "Contact Tracing Book","="*20)
 choice = 1
@@ -12,28 +12,23 @@ while choice != 3:
     if choice == 1:
       print("\n--------------- Add Contact ---------------\n")
       if len(All_Contact)< 100 :
-          First_name = input("Enter the full name : ")
+          Full_name = input("Enter the full name : ")
           Age = input("Enter the age : ")
           Address = input("Enter Address : ")
           Number = input("Enter Contact Number : ")
-          Contact = [ First_name , Age , Address , Number ]
-          All_Contact.append(Contact)
-          print("\nSuccessfully added entry no. " + str(num) + " to the Address Book!")
+          All_Contact[Full_name] = {"Age: ": Age, "Address: ": Address, "Contact number: ": Number}
+          print("\nSuccessfully added entry no. " + str(num) + " to the Contact Tracing Book!")
           num += 1
       else:
-        print("Address book contains 100 entries. We can't add any more entries.")
+        print("Contact tracing book contains 100 entries. We can't add any more entries.")
 
     elif choice == 2:
         print("\n-------------- Search Contact Information ---------------\n")
-        Option = (input("Enter the full name: "))
-        Value = [All_Contact]
-        count = 0
+        Option = (input("Enter the full name you want to tract: "))
         for key in All_Contact:
-            if Value in key:
+            if Option in All_Contact:
                 print(f"{key[0]}\t{key[1]}\t{key[2]}\t{key[3]}")
-                count =1
-        if count==0:
-            print("The contact information does not exist.")
+
 
     elif choice == 3:
         exit()
@@ -47,5 +42,6 @@ while choice != 3:
     else:
         print("Thank you for using the program!")
         break
+
 
 
